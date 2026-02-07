@@ -27,7 +27,15 @@ html, body {
 body.menu-open {
     overflow: hidden;
 }
-
+section, header, footer {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
 section[id],
 header[id] {
     scroll-margin-top: 70px;
