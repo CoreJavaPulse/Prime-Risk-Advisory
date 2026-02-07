@@ -382,36 +382,57 @@ footer {
 .navbar-wrapper.scrolled .navbar {
     height: 65px;
 }
+/* MOBILE MENU */
+.hamburger {
+    display: none;
+}
 
+/* Mobile view */
 @media (max-width: 768px) {
 
     .navbar {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 8px 12px;
-    }
-
-    .brand {
-        order: 1;              /* 👈 ALWAYS first row */
-        flex: 0 0 100%;
-        justify-content: flex-start;
-        margin-bottom: 6px;
+        height: 58px;
+        padding: 0 14px;
     }
 
     .nav-links {
-        order: 2;              /* 👈 ALWAYS second row */
-        flex: 0 0 100%;
-        justify-content: center;
-        gap: 14px;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #0f172a, #0dcaf0);
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links li {
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .nav-links a {
-        font-size: 13px;
-        padding: 6px 10px;
+        display: block;
+        padding: 14px;
+        font-size: 15px;
     }
 
-    .nav-links a::before {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 22px;
         height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+    }
+
+    .nav-links.open {
+        display: flex;
     }
 }
-

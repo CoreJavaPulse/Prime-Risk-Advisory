@@ -33,6 +33,12 @@
                 <li><a href="#about">About</a></li>
             </ul>
         </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </nav>
 
     <!-- HERO -->
@@ -177,6 +183,16 @@
             });
         });
     </script>
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+</script>
+
 </body>
 
 </html>
