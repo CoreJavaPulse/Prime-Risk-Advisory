@@ -285,12 +285,13 @@ header[id] {
 
 /* SECTIONS */
 section {
-    max-width: 1200px;
+    width: 100%;
     margin: 72px auto;
     padding: 40px;
     border-radius: 12px;
 }
 
+   
 .section-light {
     background: #ffffff;
     box-shadow: 0 7px 30px rgba(0, 0, 0, 0.04);
@@ -428,6 +429,11 @@ footer {
         z-index: 1100;
         will-change: transform;
     }
+
+    .navbar {
+    max-width: 100%;
+    padding: 0 16px;
+}
 
     .hamburger {
         display: block;
