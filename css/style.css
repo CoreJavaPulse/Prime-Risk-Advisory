@@ -285,13 +285,12 @@ header[id] {
 
 /* SECTIONS */
 section {
-    width: 100%;
+    max-width: 1200px;
     margin: 72px auto;
     padding: 40px;
     border-radius: 12px;
 }
 
-   
 .section-light {
     background: #ffffff;
     box-shadow: 0 7px 30px rgba(0, 0, 0, 0.04);
