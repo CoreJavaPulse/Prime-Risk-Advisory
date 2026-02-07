@@ -26,7 +26,8 @@ section[id], header[id] {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(15, 23, 42, 0.98);
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #0dcaf0);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(13, 202, 240, 0.2);
     transition: all 0.3s ease;
@@ -39,7 +40,7 @@ section[id], header[id] {
     max-width: 1450px;
     margin: 0 auto;
     padding:0;
-    height: 70px;
+    height: 58px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,26 +96,76 @@ section[id], header[id] {
     width: 14px;
     height: 14px;
 }
-
-/* NAVBAR LINKS - RIGHT ALIGNED */
+/* NAVBAR LINKS - FIXED FOR 58px NAVBAR */
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 24px; /* Reduced gap */
     list-style: none;
     margin: 0;
+    padding: 4px 0;
+    align-items: center;
+    justify-self:center;
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #e2e8f0;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    position: relative;
+    padding: 6px 12px; /* Compact padding */
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    align-items: center;
+    white-space: nowrap; /* Prevents text wrap */
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 0;
+    height: 5px; /* Thinner underline */
+    background: linear-gradient(90deg, #fcd34d, #0dcaf0);
+    border-radius: 1px;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(252, 211, 77, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
 }
 
 .nav-links a:hover {
-    color: #fcd34d;
+    color: #ffffff;
+    transform: translateY(-1px); /* Smaller lift */
+    background: rgba(252, 211, 77, 0.1);
+    box-shadow: 
+        0 4px 16px rgba(252, 211, 77, 0.2),
+        0 2px 8px rgba(13, 202, 240, 0.15);
 }
 
+.nav-links a:hover::before {
+    width: 75%;
+}
+
+.nav-links a:hover::after {
+    width: 200px; /* Smaller ripple for compact links */
+    height: 200px;
+}
 /* SCROLL ANIMATIONS */
 .navbar-wrapper.scrolled .lion-logo {
     height: 44px;
@@ -218,16 +269,6 @@ section {
 /* HEADINGS */
 h2 {
     font-size: 28px;
-    color: #0f172a;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-h3 {
-    font-size: 28px;
-    color: #0f172a;
-    margin-bottom: 20px;
-    position: relative;
 }
 
 h2::after {
@@ -249,11 +290,11 @@ h3 {
 /* LISTS */
 ul {
     margin-left: 20px;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 
 /* SERVICES GRID */
@@ -389,23 +430,6 @@ footer {
         display: none;  /* Hide on mobile */
     }
     
-    /* HAMBURGER BUTTON */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        cursor: pointer;
-        padding: 8px;
-    }
-    
-    .hamburger span {
-        width: 24px;
-        height: 2px;
-        background: #ffffff;
-        transition: 0.3s ease;
-        border-radius: 2px;
-    }
-}
 
 /* SMALL MOBILE (iPhone SE, small Android) */
 @media (max-width: 480px) {
