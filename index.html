@@ -183,23 +183,23 @@
             });
         });
     </script>
-
-   <script>
+<script>
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.querySelector(".nav-links");
-  const links = document.querySelectorAll(".nav-links a");
 
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
+    document.body.classList.toggle("menu-open");
   });
 
-  links.forEach(link => {
+  // Close menu when clicking a link
+  document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("open");
+      document.body.classList.remove("menu-open");
     });
   });
 </script>
-
 </body>
 
 </html>
