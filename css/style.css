@@ -384,12 +384,18 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .brand {
-        flex-direction: row;      /* logo left, text right */
-        align-items: center;
-        gap: 10px;
+
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 8px 12px;
     }
 
+     .brand {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 6px;
+    }
 
     .brand-text {
         line-height: 1.05;
@@ -408,13 +414,17 @@ footer {
         font-size: 9px;
     }
 
-     .nav-links {
-        gap: 12px;
+ .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
     }
-
     .nav-links a {
         font-size: 13px;
-        padding: 4px 8px;
-        font-weight: 600;
+        padding: 6px 10px;
+    }
+
+    .nav-links a::before {
+        height: 2px;
     }
 }
