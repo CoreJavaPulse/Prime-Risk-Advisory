@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: clip;
+    overflow-x: hidden;
 }
 
 html,
@@ -26,7 +26,10 @@ body {
     color: #334155;
     background: #f8fafc;
 }
-
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 body.menu-open {
     position: fixed;
     width: 100%;
@@ -35,10 +38,13 @@ body.menu-open {
 }
 
 section,
-header,
 footer {
-    max-width: 100vw;
-    overflow-x: hidden;
+    width: 100%;
+    max-width: 1400px;
+    margin: 72px auto;
+    padding: 40px 5%;
+    overflow: visible; 
+    box-sizing: border-box;
 }
 
 section[id],
@@ -621,7 +627,7 @@ footer {
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 0 10px;
+        padding: 0 4%;
     }
 
     .hamburger {
@@ -663,17 +669,23 @@ footer {
     }
 
     section {
-        margin: 40px 16px;
-        padding: 24px;
+       margin: 40px 4%;
+        padding: 32px 6%;
     }
 
     .site-header {
-        padding-left: 16px;
-        padding-right: 16px;
+       margin: 40px 4%;
+        padding: 32px 6%;
     }
 }
 
 @media (max-width: 640px) {
+
+    .site-header {
+        margin: 32px 2%;
+        padding: 24px 4%;
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
     }
