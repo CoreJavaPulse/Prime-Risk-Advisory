@@ -42,7 +42,7 @@ footer {
     width: 100%;
     max-width: 1400px;
     margin: 72px auto;
-    padding: 40px 5%;
+    padding: 40px 50%;
     overflow: visible; 
     box-sizing: border-box;
 }
@@ -685,7 +685,7 @@ footer {
         margin: 32px 2%;
         padding: 24px 4%;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
