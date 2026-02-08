@@ -265,6 +265,179 @@ img {
 }
 
 /* =========================================================
+   CONTACT MODAL
+========================================================= */
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 2000;
+}
+
+.contact-modal.active {
+    display: block;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 8, 23, 0.75);
+    backdrop-filter: blur(6px);
+}
+
+/* Modal Content Scrollable */
+.modal-content.secure-modal {
+    position: relative;
+    max-width: 480px;
+    max-height: 80vh;          /* Make modal scrollable if too tall */
+    overflow-y: auto;
+    margin: 5vh auto;          /* Center vertically */
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+                linear-gradient(135deg, #0dcaf0, #fcd34d) border-box;
+    border: 1px solid rgba(13, 202, 240, 0.45);
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    animation: modalFadeUp 0.4s ease;
+}
+
+@keyframes modalFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.secure-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(13, 202, 240, 0.12);
+    color: #075985;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+}
+
+.secure-badge::before {
+    content: "🔒";
+    font-size: 13px;
+}
+
+.modal-note.secure-note {
+    font-size: 13px;
+    color: #475569;
+    border-left: 3px solid #0dcaf0;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+.contact-form label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+    transition: 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.contact-form select option {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #0dcaf0;
+    box-shadow: 0 0 0 2px rgba(13, 202, 240, 0.2);
+}
+
+.contact-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><path fill='%2394a3b8' d='M4 6l4 4 4-4z'/></svg>") no-repeat right 12px center;
+    background-size: 12px;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+/* Footer & Submit */
+.secure-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 12px;
+    color: #475569;
+    margin: 12px 0 18px;
+    flex-wrap: wrap;
+}
+
+.secure-footer span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-submit.secure-submit {
+    background: linear-gradient(135deg, #020617, #0dcaf0);
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-submit.secure-submit:hover {
+    background: linear-gradient(135deg, #020617, #0891b2);
+}
+
+.small-note {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 12px;
+}
+
+   
+
+/* =========================================================
    SECTIONS
 ========================================================= */
 

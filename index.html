@@ -31,6 +31,18 @@
         gtag('config', 'G-2EQXN0KNF4');
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Prime Risk Advisory",
+      "url": "https://www.primeriskadvisory.com",
+      "description": "Independent fraud investigation, financial risk, AML, and compliance advisory services.",
+      "industry": "Financial Risk Advisory",
+      "sameAs": []
+    }
+    </script>
+
 </head>
 
 <body>
@@ -52,7 +64,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </div>
 
@@ -73,10 +85,13 @@
                 Led by experts with extensive banking & NBFC experience, delivering
                 actionable insights for institutions.
             </p>
-            <a href="#contact" class="hero-cta">Request a Confidential Discussion</a>
+            <a href="#" class="hero-cta" id="openContactModal">
+                Request a Confidential Discussion
+            </a>
+
+
         </div>
     </header>
-
     <main>
 
         <!-- ================= OVERVIEW ================= -->
@@ -186,7 +201,7 @@
 
         <!-- ================= CONTACT ================= -->
         <section id="contact" class="section-dark">
-            <h2>Contact</h2>
+            <h2>Contact Us</h2>
             <address class="contact-box">
                 <strong>Prime Risk Advisory</strong><br />
                 Proprietor: Amol Pawar<br />
@@ -226,17 +241,11 @@
             const cards = document.querySelectorAll(".fade-in");
             const hamburger = document.getElementById("hamburger");
             const navLinks = document.querySelector(".nav-links");
+            const openModalBtn = document.getElementById("openContactModal");
 
-            document.addEventListener("click", (e) => {
-                if (!navbar.contains(e.target)) {
-                    navLinks.classList.remove("open");
-                    document.body.classList.remove("menu-open");
-                }
-            });
-
+            // ================= NAVBAR SCROLL & HAMBURGER =================
             window.addEventListener("scroll", () => {
                 navbar.classList.toggle("scrolled", window.scrollY > 40);
-
                 cards.forEach(card => {
                     if (card.getBoundingClientRect().top < window.innerHeight - 50) {
                         card.classList.add("visible");
@@ -251,30 +260,137 @@
                 document.body.classList.toggle("menu-open");
             });
 
+            document.addEventListener("click", (e) => {
+                if (!navbar.contains(e.target)) {
+                    navLinks.classList.remove("open");
+                    document.body.classList.remove("menu-open");
+                }
+            });
+
             document.querySelectorAll(".nav-links a").forEach(link => {
                 link.addEventListener("click", () => {
                     navLinks.classList.remove("open");
                     document.body.classList.remove("menu-open");
                 });
             });
+
+            // ================= DYNAMIC MODAL LOAD =================
+            openModalBtn.addEventListener("click", async (e) => {
+                e.preventDefault();
+
+                // Load modal only once
+                if (!document.getElementById("contactModal")) {
+                    const res = await fetch("contact-form.html");
+                    const html = await res.text();
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+
+                const modal = document.getElementById("contactModal");
+                modal.classList.add("active");
+                document.body.style.overflow = "hidden";
+
+                // Initialize modal & form
+                initContactModal(modal);
+            });
+
+            // ================= CONTACT MODAL & FORM HANDLER =================
+            function initContactModal(modal) {
+                const overlay = modal.querySelector("#closeModal");
+                const closeBtn = modal.querySelector("#modalCloseBtn");
+                const form = modal.querySelector(".contact-form");
+                const feedback = modal.querySelector("#formFeedback");
+
+                // Close modal handlers
+                [overlay, closeBtn].forEach(el => {
+                    el.addEventListener("click", () => closeModal(modal));
+                });
+
+                // Trap focus inside modal
+                trapFocus(modal);
+
+                // Handle form submission
+                form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    feedback.style.display = "none";
+                    feedback.textContent = "";
+
+                    // Honeypot check
+                    if (form.hp_email.value) {
+                        feedback.style.color = "red";
+                        feedback.textContent = "⚠️ Submission blocked (spam detected).";
+                        feedback.style.display = "block";
+                        return;
+                    }
+
+                    const formData = new FormData(form);
+                    const submitBtn = form.querySelector("button[type='submit']");
+                    submitBtn.disabled = true;
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: form.method,
+                            body: formData,
+                            headers: { 'Accept': 'application/json' },
+                        });
+
+                        if (response.ok) {
+                            feedback.style.color = "green";
+                            feedback.textContent = "✅ Thank you! Your request has been submitted securely.";
+                            feedback.style.display = "block";
+                            form.reset();
+
+                            // Auto-close after 3 seconds
+                            setTimeout(() => closeModal(modal), 3000);
+                        } else {
+                            const data = await response.json();
+                            throw new Error(data?.error || "Submission failed. Please try again.");
+                        }
+                    } catch (err) {
+                        feedback.style.color = "red";
+                        feedback.textContent = `⚠️ ${err.message}`;
+                        feedback.style.display = "block";
+                    } finally {
+                        submitBtn.disabled = false;
+                    }
+                });
+            }
+
+            // ================= UTILITY FUNCTIONS =================
+            function closeModal(modal) {
+                modal.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+
+            function trapFocus(modal) {
+                const focusableEls = modal.querySelectorAll(
+                    'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+                );
+                const firstEl = focusableEls[0];
+                const lastEl = focusableEls[focusableEls.length - 1];
+
+                modal.addEventListener('keydown', (e) => {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey) {
+                            if (document.activeElement === firstEl) {
+                                e.preventDefault();
+                                lastEl.focus();
+                            }
+                        } else {
+                            if (document.activeElement === lastEl) {
+                                e.preventDefault();
+                                firstEl.focus();
+                            }
+                        }
+                    }
+                    if (e.key === 'Escape') closeModal(modal);
+                });
+
+                firstEl.focus();
+            }
         });
 
+
     </script>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Prime Risk Advisory",
-  "url": "https://www.primeriskadvisory.com",
-  "description": "Independent fraud investigation, financial risk, AML, and compliance advisory services.",
-  "industry": "Financial Risk Advisory",
-  "sameAs": []
-}
-</script>
-
-
-
 </body>
 
 </html>
