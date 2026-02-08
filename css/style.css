@@ -444,7 +444,7 @@ img {
 section {
     max-width: 1500px;
     margin: 72px 40px;
-    padding: 30px;
+    padding: 30px 40px;
     border-radius: 12px;
 }
 
@@ -663,7 +663,7 @@ footer {
 
     section {
         margin: 40px 40px;
-        padding: 24px;
+        padding: 24px 40px;
     }
 
     .site-header {
