@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://github.com/CoreJavaPulse/Prime-Risk-Advisory/blob/main/sitemap.xml
+Sitemap: https://corejavapulse.github.io/Prime-Risk-Advisory/sitemap.xml
