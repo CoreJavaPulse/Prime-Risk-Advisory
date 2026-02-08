@@ -645,6 +645,8 @@ footer {
 /* =========================================================
    MOBILE
 ========================================================= */
+
+
 @media (max-width: 768px) {
 
     .navbar {
@@ -705,11 +707,16 @@ footer {
     }
 }
 
+@media (max-width: 640px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
 @media (max-width: 480px) {
 
     /* NEW: Extra small screens */
-    section,
-    .site-header {
+    section{
         margin: 32px auto;
         padding: 24px 4%;
     }
@@ -738,8 +745,3 @@ footer {
 }
 
 
-@media (max-width: 640px) {
-    .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
