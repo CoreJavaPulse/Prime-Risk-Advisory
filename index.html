@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <title>Prime Risk Advisory | Fraud & Financial Risk Advisory</title>
@@ -13,238 +14,267 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="images/icon_logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script>
+
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar-wrapper">
-    <div class="navbar">
-        <div class="brand">
-            <img src="images/icon_logo.png"
-                 alt="Prime Risk Advisory Logo"
-                 class="lion-logo"
-                 loading="lazy" />
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar-wrapper">
+        <div class="navbar">
+            <div class="brand">
+                <img src="images/icon_logo.png" alt="Prime Risk Advisory Logo" class="lion-logo" loading="lazy" />
 
-            <div class="brand-text">
-                <div class="brand-name">Prime Risk Advisory</div>
-                <div class="brand-subtitle">Fraud & Financial Investigations</div>
-                <div class="brand-slogan">Facts before Conclusions</div>
+                <div class="brand-text">
+                    <div class="brand-name">Prime Risk Advisory</div>
+                    <div class="brand-subtitle">Fraud & Financial Investigations</div>
+                    <div class="brand-slogan">Facts before Conclusions</div>
+                </div>
             </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+        <!-- Mobile Hamburger -->
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-    <!-- Mobile Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</nav>
-
-<!-- ================= HERO ================= -->
-<header class="site-header" id="home">
-    <div class="hero-content">
-        <h3 class="hero-subtitle">• Fraud Investigation • Financial Risk • Compliance Advisory</h3>
-        <h1 class="hero-heading">Trusted Partner in Fraud, Financial Risk & Compliance</h1>
-        <p class="hero-note">
-            Led by experts with extensive banking & NBFC experience, delivering
-            actionable insights for institutions.
-        </p>
-        <a href="#contact" class="hero-cta">Request a Confidential Discussion</a>
-    </div>
-</header>
-
-<main>
-
-<!-- ================= OVERVIEW ================= -->
-<section class="section-light">
-    <h2>Overview</h2>
-    <p>
-        Prime Risk Advisory is an independent consulting practice providing
-        case-based and retainer support across fraud investigation, financial
-        risk assessment, AML, and compliance reviews.
-    </p>
-    <p class="small-note">
-        <strong>Ideal for institutions requiring independent review beyond internal controls.</strong>
-    </p>
-
-    <h3>Core Focus Areas</h3>
-    <ul>
-        <li>Fraud Investigation & Analysis</li>
-        <li>Financial Risk Advisory</li>
-        <li>AML & Compliance Reviews</li>
-        <li>Due Diligence & Background Verification</li>
-    </ul>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section-dark">
-    <h2>Our Services</h2>
-
-    <div class="services-grid">
-        <div class="service-card fade-in">
-            <div class="icon">🔍</div>
-            <h3>Fraud Investigation</h3>
-            <p>
-                Structured investigations to establish facts, identify exposure,
-                and support regulatory or management decisions.
+    <!-- ================= HERO ================= -->
+    <header class="site-header" id="home">
+        <div class="hero-content">
+            <h3 class="hero-subtitle">• Fraud Investigation • Financial Risk • Compliance Advisory</h3>
+            <h1 class="hero-heading">Trusted Partner in Fraud, Financial Risk & Compliance</h1>
+            <p class="hero-note">
+                Led by experts with extensive banking & NBFC experience, delivering
+                actionable insights for institutions.
             </p>
+            <a href="#contact" class="hero-cta">Request a Confidential Discussion</a>
         </div>
+    </header>
 
-        <div class="service-card fade-in">
-            <div class="icon">📊</div>
-            <h3>Financial Risk Advisory</h3>
+    <main>
+
+        <!-- ================= OVERVIEW ================= -->
+        <section class="section-light">
+            <h2>Overview</h2>
             <p>
-                Independent risk perspectives to strengthen credit assessment,
-                portfolio oversight, and governance.
+                Prime Risk Advisory is an independent consulting practice providing
+                case-based and retainer support across fraud investigation, financial
+                risk assessment, AML, and compliance reviews.
             </p>
-        </div>
+            <p class="small-note">
+                <strong>Ideal for institutions requiring independent review beyond internal controls.</strong>
+            </p>
 
-        <div class="service-card fade-in">
-            <div class="icon">✅</div>
-            <h3>AML & Compliance Review</h3>
+            <h3>Core Focus Areas</h3>
+            <ul>
+                <li>Fraud Investigation & Analysis</li>
+                <li>Financial Risk Advisory</li>
+                <li>AML & Compliance Reviews</li>
+                <li>Due Diligence & Background Verification</li>
+            </ul>
+        </section>
+
+        <!-- ================= SERVICES ================= -->
+        <section id="services" class="section-dark">
+            <h2>Our Services</h2>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="icon">🔍</div>
+                    <h3>Fraud Investigation</h3>
+                    <p>
+                        Structured investigations to establish facts, identify exposure,
+                        and support regulatory or management decisions.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="icon">📊</div>
+                    <h3>Financial Risk Advisory</h3>
+                    <p>
+                        Independent risk perspectives to strengthen credit assessment,
+                        portfolio oversight, and governance.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="icon">✅</div>
+                    <h3>AML & Compliance Review</h3>
+                    <p>
+                        Identification of control gaps with actionable recommendations
+                        aligned to regulatory expectations.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="icon">📝</div>
+                    <h3>Due Diligence</h3>
+                    <p>
+                        Structured due diligence supporting informed lending and
+                        third-party engagement decisions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= WHO WE SUPPORT ================= -->
+        <section class="section-light">
+            <h2>Who We Support</h2>
+            <ul>
+                <li>Banks & Financial Institutions</li>
+                <li>NBFCs</li>
+                <li>Fintech Companies</li>
+                <li>Corporates</li>
+                <li>Audit & Risk Functions</li>
+            </ul>
+        </section>
+
+        <!-- ================= WHY US ================= -->
+        <section class="section-dark">
+            <h2>Why Prime Risk Advisory?</h2>
+            <ul>
+                <li>Independent and conflict-free perspective</li>
+                <li>Strong banking-domain expertise</li>
+                <li>Structured, defensible reporting</li>
+                <li>Regulator-conscious approach</li>
+                <li>Flexible engagement models</li>
+                <li>High confidentiality standards</li>
+            </ul>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="section-light">
+            <h2>About Us</h2>
             <p>
-                Identification of control gaps with actionable recommendations
-                aligned to regulatory expectations.
+                Founded by <strong>Amol Pawar</strong>, Prime Risk Advisory specializes
+                in structured investigations, root-cause analysis, and practical risk
+                mitigation recommendations.
             </p>
-        </div>
+            <ul>
+                <li>Independent investigation approach</li>
+                <li>Structured, defensible reporting</li>
+                <li>Root-cause driven analysis</li>
+                <li>Actionable recommendations</li>
+            </ul>
+        </section>
 
-        <div class="service-card fade-in">
-            <div class="icon">📝</div>
-            <h3>Due Diligence</h3>
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="section-dark">
+            <h2>Contact</h2>
+            <address class="contact-box">
+                <strong>Prime Risk Advisory</strong><br />
+                Proprietor: Amol Pawar<br />
+                Based in India | Serving Clients Across Locations<br />
+                Email:
+                <a href="mailto:primeriskadvisory@gmail.com">
+                    primeriskadvisory@gmail.com
+                </a>
+            </address>
+        </section>
+
+        <!-- ================= DISCLAIMER ================= -->
+        <section class="section-light">
+            <h2>Disclaimer</h2>
             <p>
-                Structured due diligence supporting informed lending and
-                third-party engagement decisions.
+                Prime Risk Advisory maintains strict confidentiality and does not
+                publicly disclose client names due to the sensitive nature of
+                assignments.
             </p>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- ================= WHO WE SUPPORT ================= -->
-<section class="section-light">
-    <h2>Who We Support</h2>
-    <ul>
-        <li>Banks & Financial Institutions</li>
-        <li>NBFCs</li>
-        <li>Fintech Companies</li>
-        <li>Corporates</li>
-        <li>Audit & Risk Functions</li>
-    </ul>
-</section>
+    </main>
 
-<!-- ================= WHY US ================= -->
-<section class="section-dark">
-    <h2>Why Prime Risk Advisory?</h2>
-    <ul>
-        <li>Independent and conflict-free perspective</li>
-        <li>Strong banking-domain expertise</li>
-        <li>Structured, defensible reporting</li>
-        <li>Regulator-conscious approach</li>
-        <li>Flexible engagement models</li>
-        <li>High confidentiality standards</li>
-    </ul>
-</section>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>
+        <p>© 2026 Prime Risk Advisory. All rights reserved. This website is for informational purposes only.</p>
+        <p class="small-note">Confidential & Privileged</p>
+        <a href="privacy_policy.html">Privacy Policy</a>  |  
+        <a href="terms.html">Terms & Conditions</a>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section-light">
-    <h2>About Us</h2>
-    <p>
-        Founded by <strong>Amol Pawar</strong>, Prime Risk Advisory specializes
-        in structured investigations, root-cause analysis, and practical risk
-        mitigation recommendations.
-    </p>
-    <ul>
-        <li>Independent investigation approach</li>
-        <li>Structured, defensible reporting</li>
-        <li>Root-cause driven analysis</li>
-        <li>Actionable recommendations</li>
-    </ul>
-</section>
+    </footer>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section-dark">
-    <h2>Contact</h2>
-    <address class="contact-box">
-        <strong>Prime Risk Advisory</strong><br />
-        Proprietor: Amol Pawar<br />
-        Based in India | Serving Clients Across Locations<br />
-        Email:
-        <a href="mailto:primeriskadvisory@gmail.com">
-            primeriskadvisory@gmail.com
-        </a>
-    </address>
-</section>
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.querySelector(".navbar-wrapper");
+            const cards = document.querySelectorAll(".fade-in");
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.querySelector(".nav-links");
 
-<!-- ================= DISCLAIMER ================= -->
-<section class="section-light">
-    <h2>Disclaimer</h2>
-    <p>
-        Prime Risk Advisory maintains strict confidentiality and does not
-        publicly disclose client names due to the sensitive nature of
-        assignments.
-    </p>
-</section>
+            document.addEventListener("click", (e) => {
+                if (!navbar.contains(e.target)) {
+                    navLinks.classList.remove("open");
+                    document.body.classList.remove("menu-open");
+                }
+            });
 
-</main>
+            window.addEventListener("scroll", () => {
+                navbar.classList.toggle("scrolled", window.scrollY > 40);
 
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>© 2026 Prime Risk Advisory. All rights reserved.</p>
-    <p class="small-note">Confidential & Privileged</p>
-</footer>
+                cards.forEach(card => {
+                    if (card.getBoundingClientRect().top < window.innerHeight - 50) {
+                        card.classList.add("visible");
+                    }
+                });
+            });
 
-<!-- ================= SCRIPTS ================= -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector(".navbar-wrapper");
-    const cards = document.querySelectorAll(".fade-in");
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.querySelector(".nav-links");
+            hamburger.addEventListener("click", () => {
+                const isOpen = navLinks.classList.contains("open");
+                hamburger.setAttribute("aria-expanded", !isOpen);
+                navLinks.classList.toggle("open");
+                document.body.classList.toggle("menu-open");
+            });
 
-    document.addEventListener("click", (e) => {
-        if (!navbar.contains(e.target)) {
-            navLinks.classList.remove("open");
-            document.body.classList.remove("menu-open");
-        }
-    });
-
-    window.addEventListener("scroll", () => {
-        navbar.classList.toggle("scrolled", window.scrollY > 40);
-
-        cards.forEach(card => {
-            if (card.getBoundingClientRect().top < window.innerHeight - 50) {
-                card.classList.add("visible");
-            }
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("open");
+                    document.body.classList.remove("menu-open");
+                });
+            });
         });
-    });
 
-    hamburger.addEventListener("click", () => {
-        const isOpen = navLinks.classList.contains("open");
-        hamburger.setAttribute("aria-expanded", !isOpen);
-        navLinks.classList.toggle("open");
-        document.body.classList.toggle("menu-open");
-    });
+    </script>
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("open");
-            document.body.classList.remove("menu-open");
-        });
-    });
-});
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Prime Risk Advisory",
+  "url": "https://www.primeriskadvisory.com",
+  "description": "Independent fraud investigation, financial risk, AML, and compliance advisory services.",
+  "industry": "Financial Risk Advisory",
+  "sameAs": []
+}
 </script>
 
+
+
 </body>
+
 </html>
