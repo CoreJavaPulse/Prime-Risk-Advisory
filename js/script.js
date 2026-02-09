@@ -60,6 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.add("active");
         document.body.style.overflow = "hidden";
 
+        // ===== RESET FORM STATE ON OPEN =====
+        const form = modal.querySelector(".contact-form");
+        const feedback = modal.querySelector("#formFeedback");
+
+        if (form) form.reset();
+        if (feedback) {
+            feedback.style.display = "none";
+            feedback.textContent = "";
+        }
+
         initContactModal(modal);
     });
 });
@@ -79,50 +89,91 @@ function initContactModal(modal) {
     // Trap focus inside modal
     trapFocus(modal);
 
-    // Form submit
     form.addEventListener("submit", async e => {
         e.preventDefault();
+
+        // Reset feedback
         feedback.style.display = "none";
         feedback.textContent = "";
 
         // Honeypot spam check
-        const honeypot = form.hp_email.value;
-        if (honeypot) {
+        if (form.hp_email.value) {
             feedback.style.color = "red";
             feedback.textContent = "⚠️ Submission blocked (spam detected).";
             feedback.style.display = "block";
             return;
         }
 
-        const formData = new FormData(form);
         const submitBtn = form.querySelector("button[type='submit']");
+        const btnText = submitBtn.querySelector(".btn-text");
+
+        // Loading state
         submitBtn.disabled = true;
+        submitBtn.classList.add("loading");
+        btnText.textContent = "Submitting…";
 
         try {
+            const formData = new FormData(form);
             const response = await fetch(form.action, {
                 method: form.method,
                 body: formData,
-                headers: { "Accept": "application/json" }
+                headers: { Accept: "application/json" }
             });
 
-            if (response.ok) {
-                feedback.style.color = "green";
-                feedback.textContent = "✅ Thank you! Your request has been submitted securely.";
-                feedback.style.display = "block";
+            const data = await response.json();
+
+            if (data.status === "success") {
                 form.reset();
-                setTimeout(() => closeModalFunc(modal), 3000);
-            } else {
-                const data = await response.json();
-                throw new Error(data?.error || "Submission failed. Please try again.");
+                showSuccessAnimation(modal);
+                return; // ⛔ stop here, don't reset button
             }
+
+            if (data.status === "duplicate") {
+                feedback.style.color = "#b45309";
+                feedback.textContent = "⚠️ We already received your request recently.";
+                feedback.style.display = "block";
+            } else {
+                throw new Error("Submission failed. Please try again.");
+            }
+
         } catch (err) {
             feedback.style.color = "red";
             feedback.textContent = `⚠️ ${err.message}`;
             feedback.style.display = "block";
         } finally {
-            submitBtn.disabled = false;
+            // Only reset button if form is still visible
+            if (feedback.style.display === "block") {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove("loading");
+                btnText.textContent = "Submit Secure Request";
+            }
         }
     });
+}
+
+function showSuccessAnimation(modal) {
+    const form = modal.querySelector("form");
+    const success = modal.querySelector(".success-state");
+    const submitBtn = form.querySelector("button[type='submit']");
+    const btnText = submitBtn.querySelector(".btn-text");
+
+    // Hide form
+    form.style.display = "none";
+
+    // Reset button state
+    submitBtn.disabled = false;
+    submitBtn.classList.remove("loading");
+    btnText.textContent = "Submit Secure Request";
+
+    // Show success
+    success.hidden = false;
+
+    // Close handler
+    success.querySelector(".success-close").onclick = () => {
+        success.hidden = true;
+        form.style.display = "";
+        closeModalFunc(modal);
+    };
 }
 
 // Close modal function

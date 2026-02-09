@@ -1,63 +1,78 @@
 <!-- ✅ EMBEDDED SECURE CONTACT MODAL (NO EXTERNAL FETCH) -->
-    <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" aria-describedby="contactModalDesc">
-        <div class="modal-overlay" id="closeModal"></div>
-        <div class="modal-content secure-modal">
-            <button class="modal-close" id="modalCloseBtn" aria-label="Close">×</button>
-            <div class="secure-badge">🔒 Secure & Confidential Channel</div>
-            <h2 id="contactModalTitle">Request a Confidential Discussion</h2>
-            <p class="modal-note secure-note" id="contactModalDesc">
-                This channel is intended for sensitive inquiries. Information shared is accessible only to authorized personnel. 
-                Please avoid sharing credentials or account numbers.
-            </p>
-            
-            <!-- ✅ PERFECT FORM - Google Sheets Native Submit -->
-        <form class="contact-form" 
-      action="https://script.google.com/macros/s/AKfycbzq_c5VFk9nM1xpZE-gedLsL9VbQhwkPFUY1nFaSW22NlyL2ny07WmmdvsHQYidALZDVw/exec"
-      method="POST" >
-                
-                <input type="hidden" name="source" value="Secure Website Contact">
-                <input type="hidden" name="confidentiality" value="Privileged & Confidential">
-                
-                <label>Full Name *
-                    <input type="text" name="name" required autocomplete="name" placeholder="John Doe">
-                </label>
-                <label>Email Address *
-                    <input type="email" name="email" required autocomplete="email" placeholder="your.email@example.com">
-                </label>
-                <label>Phone
-                    <input type="tel" name="phone" placeholder="+91 (XXX) XXX-XXXX" autocomplete="tel">
-                </label>
-                <label>Organization / Institution
-                    <input type="text" name="organization" placeholder="Institution name" autocomplete="organization">
-                </label>
-                <label>Service Type *
-                    <select name="service_type" required>
-                        <option value="">Select a service</option>
-                        <option value="fraud_investigation">Fraud Investigation</option>
-                        <option value="financial_risk_advisory">Financial Risk Advisory</option>
-                        <option value="aml_compliance_review">AML & Compliance Review</option>
-                        <option value="due_diligence">Due Diligence</option>
-                    </select>
-                </label>
-                
-                <!-- ✅ HONEYPOT SPAM PROTECTION -->
-                <label style="display:none;">
-                    Leave this field empty
-                    <input type="text" name="hp_email" autocomplete="off">
-                </label>
-                
-                <label>Nature of Inquiry
-                    <textarea name="message" rows="4" placeholder="High-level description only. Do not include credentials or account numbers."></textarea>
-                </label>
-                
-                <div class="secure-footer">
-                    <span>🔒 End-to-end encrypted transmission</span>
-                    <span>👤 Restricted access</span>
-                </div>
-                
-                <p id="formFeedback" class="small-note" style="display:none;"></p>
-                <button type="submit" class="form-submit secure-submit">Submit Secure Request</button>
-                <p class="small-note">Engagements are subject to independence and conflict-of-interest checks.</p>
-            </form>
+<div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="contactModalTitle" aria-describedby="contactModalDesc">
+    <div class="modal-overlay" id="closeModal"></div>
+    <div class="modal-content secure-modal">
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close">×</button>
+        <div class="secure-badge">Secure & Confidential Channel</div>
+        <h2 id="contactModalTitle">Request a Confidential Discussion</h2>
+        <p class="modal-note secure-note" id="contactModalDesc">
+            This channel is intended for sensitive inquiries. Information shared is accessible only to authorized
+            personnel.
+            Please avoid sharing credentials or account numbers.
+        </p>
+
+        <!-- ✅ PERFECT FORM - Google Sheets Native Submit -->
+        <form class="contact-form"
+            action="https://script.google.com/macros/s/AKfycbxHjkCNCBqstgycQTqViOk0WxZP7vUowKlt2-0masDMkEtqt8jl4ptKeMvleKoozKYhFA/exec"
+            method="POST">
+
+            <input type="hidden" name="source" value="Secure Website Contact">
+            <input type="hidden" name="confidentiality" value="Privileged & Confidential">
+
+            <label>Full Name *
+                <input type="text" name="name" required autocomplete="name" placeholder="John Doe">
+            </label>
+            <label>Email Address *
+                <input type="email" name="email" required autocomplete="email" placeholder="your.email@example.com">
+            </label>
+            <label>Phone
+                <input type="tel" name="phone" placeholder="+91 (XXX) XXX-XXXX" autocomplete="tel">
+            </label>
+            <label>Organization / Institution
+                <input type="text" name="organization" placeholder="Institution name" autocomplete="organization">
+            </label>
+            <label>Service Type *
+                <select name="service_type" required>
+                    <option value="">Select a service</option>
+                    <option value="fraud_investigation">Fraud Investigation</option>
+                    <option value="financial_risk_advisory">Financial Risk Advisory</option>
+                    <option value="aml_compliance_review">AML & Compliance Review</option>
+                    <option value="due_diligence">Due Diligence</option>
+                </select>
+            </label>
+
+            <!-- ✅ HONEYPOT SPAM PROTECTION -->
+            <label style="display:none;">
+                Leave this field empty
+                <input type="text" name="hp_email" autocomplete="off">
+            </label>
+
+            <label>Nature of Inquiry
+                <textarea name="message" rows="4"
+                    placeholder="High-level description only. Do not include credentials or account numbers."></textarea>
+            </label>
+
+            <div class="secure-footer">
+                <span>🔒 End-to-end encrypted transmission</span>
+                <span>👤 Restricted access</span>
+            </div>
+
+            <p id="formFeedback" class="small-note" style="display:none;"></p>
+            <button type="submit" class="form-submit secure-submit">
+                <span class="btn-text">Submit Secure Request</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <p class="small-note">Engagements are subject to independence and conflict-of-interest checks.</p>
+        </form>
+
+        <!-- 👇 SUCCESS STATE GOES HERE 👇 -->
+        <div class="success-state" hidden>
+            <div class="success-check">✓</div>
+            <h3>Request Submitted</h3>
+            <p>Your confidential request has been received securely.</p>
+            <button type="button" class="success-close">Close</button>
         </div>
     </div>
+</div>
