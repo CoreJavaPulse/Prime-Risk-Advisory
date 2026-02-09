@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
     // ===== ELEMENTS =====
     const navbar = document.querySelector(".navbar-wrapper");
     const serviceCards = document.querySelectorAll(".service-card");
@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    if("link"in document.createElement("link"))[
+    {href:"https://fonts.googleapis.com",rel:"dns-prefetch"},
+    {href:"https://www.googletagmanager.com",rel:"dns-prefetch"},
+    {href:"https://script.google.com",rel:"dns-prefetch"}
+].forEach(d=>{const l=document.createElement("link");l.rel=d.rel,l.href=d.href,document.head.appendChild(l)})
 
     // ===== HAMBURGER MENU =====
     hamburger.addEventListener("click", () => {
@@ -206,3 +212,9 @@ function trapFocus(modal) {
 
     first.focus();
 }
+
+// Add server-side sanitization (Google Sheets handles this)
+function sanitizeInput(str) {
+    return str.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+}
+

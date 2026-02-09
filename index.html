@@ -4,46 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Prime Risk Advisory | Fraud & Financial Risk Advisory</title>
-
-    <!-- Viewport -->
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-
-    <!-- SEO -->
     <meta name="description"
         content="Independent fraud investigation, financial risk, AML, and compliance advisory services for banks, NBFCs, fintechs, and corporates.">
     <meta name="keywords"
         content="Fraud Investigation, Financial Risk Advisory, AML Compliance, NBFC Risk, Banking Fraud Consultant India">
     <meta name="google-site-verification" content="oRCwetseA1Fz-b1lKmc405kE0rfr6e4rkbkaIcg_xDI">
 
-    <!-- Fonts -->
+    <!-- ✅ CRITICAL CSS FIRST (Above fonts) -->
+    <style>
+        .hero-subtitle,
+        .hero-heading,
+        .hero-note,
+        .hero-cta {
+            opacity: 0;
+            animation: fadeIn 1s forwards
+        }
+
+        .hero-subtitle {
+            animation-delay: .2s
+        }
+
+        .hero-heading {
+            animation-delay: .4s
+        }
+
+        .hero-note {
+            animation-delay: .6s
+        }
+
+        .hero-cta {
+            animation-delay: .9s
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+
+    <!-- FIXED CSP - Remove broken markdown links -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://script.google.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: https://via.placeholder.com;">
+
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="images/icon_logo.png" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Styles & Favicon -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/icon_logo.png">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EQXN0KNF4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments) }
-        gtag('js', new Date());
-        gtag('config', 'G-2EQXN0KNF4');
-    </script>
+    <!-- Schema & Analytics -->
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Prime Risk Advisory","url":"https://www.primeriskadvisory.com","description":"Independent fraud investigation, financial risk, AML, and compliance advisory services.","industry":"Financial Risk Advisory"}</script>
 
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Prime Risk Advisory",
-        "url": "https://www.primeriskadvisory.com",
-        "description": "Independent fraud investigation, financial risk, AML, and compliance advisory services.",
-        "industry": "Financial Risk Advisory"
-    }
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EQXN0KNF4"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date()); gtag('config', 'G-2EQXN0KNF4');</script>
 </head>
 
 <body>
@@ -75,7 +94,8 @@
         <div class="hero-content">
             <h3 class="hero-subtitle">• Fraud Investigation • Financial Risk • Compliance Advisory</h3>
             <h1 class="hero-heading">Trusted Partner in Fraud, Financial Risk & Compliance</h1>
-            <p class="hero-note">Led by experts with extensive banking & NBFC experience, delivering actionable insights for institutions.</p>
+            <p class="hero-note">Led by experts with extensive banking & NBFC experience, delivering actionable insights
+                for institutions.</p>
             <a href="#" class="hero-cta" id="openContactModal">Request a Confidential Discussion</a>
         </div>
     </header>
@@ -84,8 +104,10 @@
         <!-- OVERVIEW -->
         <section class="section-light">
             <h2>Overview</h2>
-            <p>Prime Risk Advisory is an independent consulting practice providing case-based and retainer support across fraud investigation, financial risk assessment, AML, and compliance reviews.</p>
-            <p class="small-note"><strong>Ideal for institutions requiring independent review beyond internal controls.</strong></p>
+            <p>Prime Risk Advisory is an independent consulting practice providing case-based and retainer support
+                across fraud investigation, financial risk assessment, AML, and compliance reviews.</p>
+            <p class="small-note"><strong>Ideal for institutions requiring independent review beyond internal
+                    controls.</strong></p>
             <h3>Core Focus Areas</h3>
             <ul>
                 <li>Fraud Investigation & Analysis</li>
@@ -102,17 +124,20 @@
                 <div class="service-card">
                     <div class="icon">🔍</div>
                     <h3>Fraud Investigation</h3>
-                    <p>Structured investigations to establish facts, identify exposure, and support regulatory or management decisions.</p>
+                    <p>Structured investigations to establish facts, identify exposure, and support regulatory or
+                        management decisions.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon">📊</div>
                     <h3>Financial Risk Advisory</h3>
-                    <p>Independent risk perspectives to strengthen credit assessment, portfolio oversight, and governance.</p>
+                    <p>Independent risk perspectives to strengthen credit assessment, portfolio oversight, and
+                        governance.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon">✅</div>
                     <h3>AML & Compliance Review</h3>
-                    <p>Identification of control gaps with actionable recommendations aligned to regulatory expectations.</p>
+                    <p>Identification of control gaps with actionable recommendations aligned to regulatory
+                        expectations.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon">📝</div>
@@ -150,7 +175,8 @@
         <!-- ABOUT -->
         <section id="about" class="section-light">
             <h2>About Us</h2>
-            <p>Founded by <strong>Amol Pawar</strong>, Prime Risk Advisory specializes in structured investigations, root-cause analysis, and practical risk mitigation recommendations.</p>
+            <p>Founded by <strong>Amol Pawar</strong>, Prime Risk Advisory specializes in structured investigations,
+                root-cause analysis, and practical risk mitigation recommendations.</p>
             <ul>
                 <li>Independent investigation approach</li>
                 <li>Structured, defensible reporting</li>
@@ -173,7 +199,8 @@
         <!-- DISCLAIMER -->
         <section class="section-light">
             <h2>Disclaimer</h2>
-            <p>Prime Risk Advisory maintains strict confidentiality and does not publicly disclose client names due to the sensitive nature of assignments.</p>
+            <p>Prime Risk Advisory maintains strict confidentiality and does not publicly disclose client names due to
+                the sensitive nature of assignments.</p>
         </section>
     </main>
 
@@ -189,5 +216,3 @@
 </body>
 
 </html>
-
-   
