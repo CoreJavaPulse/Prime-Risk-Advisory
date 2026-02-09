@@ -20,6 +20,8 @@
             <input type="hidden" name="_csrf" value="generate-unique-token">
             <input type="hidden" name="source" value="Secure Website Contact">
             <input type="hidden" name="confidentiality" value="Privileged & Confidential">
+            <input type="hidden" name="hp_email" autocomplete="off">
+
 
             <label>Full Name *
                 <input type="text" name="name" required autocomplete="name" placeholder="John Doe">
@@ -43,11 +45,7 @@
                 </select>
             </label>
 
-            <!-- ✅ HONEYPOT SPAM PROTECTION -->
-            <label style="display:none;">
-                Leave this field empty
-                <input type="text" name="hp_email" autocomplete="off">
-            </label>
+           
 
             <label>Nature of Inquiry
                 <textarea name="message" rows="4"
