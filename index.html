@@ -45,8 +45,8 @@
     </style>
 
     <!-- FIXED CSP - Remove broken markdown links -->
-   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://script.google.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: https://via.placeholder.com;">
-
+   <!-- Add the script domains to the connect-src directive -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
 
     <!-- Preload Critical Resources -->
     <link rel="preload" href="css/style.css" as="style">
