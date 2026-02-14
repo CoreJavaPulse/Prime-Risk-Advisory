@@ -61,7 +61,9 @@ img {
     background: linear-gradient(135deg, #0f172a, #0dcaf0);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(13, 202, 240, .2);
-    transition: all .3s ease
+    transition: all .3s ease;
+    box-shadow:0 4px 18px rgba(0,0,0,0.08);
+
 }
 
 .navbar-wrapper.scrolled {
@@ -153,7 +155,7 @@ img {
     position: relative;
     padding: 6px 12px;
     border-radius: 20px;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: .2px;
     color: #fff;
@@ -206,7 +208,7 @@ img {
     background: linear-gradient(135deg, #0f172a, #0dcaf0);
     color: #fff;
     text-align: center;
-    padding: 36px 24px;
+    padding: 40px 24px;
     position: relative;
     overflow: hidden
 }
@@ -518,7 +520,7 @@ img {
 .small-note {
     font-size: 12px;
     color: #64748b;
-    margin-top: 12px
+    margin-top: 5px
 }
 
 /* =========================================================
@@ -586,7 +588,7 @@ ul li {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
-    transition: .3s;
+    transition: .2s;
     opacity: 0;
     transform: translateY(20px)
 }
@@ -614,8 +616,72 @@ footer {
     text-align: center;
     background: #0f172a;
     color: #94a3b8;
-    padding: 28px 20px;
-    font-size: 13.5px
+    padding: 20px 20px;
+    font-size: 13.5px;
+}
+
+
+/* Footer Social Icons - Perfect Match */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(13, 202, 240, 0.2), rgba(252, 211, 77, 0.2));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(13, 202, 240, 0.3);
+    color: #0dcaf0;
+    text-decoration: none;
+    transition: all .3s cubic-bezier(.25, .46, .45, .94);
+}
+.social-link:hover {
+    background: linear-gradient(135deg, #0dcaf0, #fcd34d);
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(13, 202, 240, 0.4);
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 15%;
+}
+
+/* Pedigree Section (Matches service-card exactly) */
+.contact-box1 {
+    background: rgb(235 239 243);
+    border-left: 4px solid #fcd34d;
+    margin-top: 2%;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .06)
+}
+
+.milestone-number {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #0dcaf0, #fcd34d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.milestone-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a
 }
 
 /* =========================================================
@@ -674,7 +740,25 @@ footer {
         margin: 48px auto;
         padding: 28px 6%
     }
+
+    .footer-social {
+        gap: 16px;
+        margin: 16px 0;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 10%;
+    }
 }
+
+
 
 @media (min-width:769px) and (max-width:1200px) {
     .hamburger {

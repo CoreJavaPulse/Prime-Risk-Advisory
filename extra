@@ -1,0 +1,37 @@
+
+        <!-- PILOT FORM -->
+        <section id="contactFormSection" class="section-light">
+            <h2>Request a Pilot Investigation</h2>
+            <form class="contact-form pilot-form" id="pilotForm">
+                <div class="form-group">
+                    <label for="pilotName">Full Name *</label>
+                    <input type="text" id="pilotName" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="pilotDesignation">Designation *</label>
+                    <input type="text" id="pilotDesignation" name="designation" required
+                        placeholder="e.g., Credit Head, Risk Manager">
+                </div>
+                <div class="form-group">
+                    <label for="pilotOrg">Bank/NBFC *</label>
+                    <input type="text" id="pilotOrg" name="organization" required placeholder="Your institution name">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pilotMobile">Mobile *</label>
+                        <input type="tel" id="pilotMobile" name="mobile" required placeholder="+91 98XXX XXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="pilotEmail">Email *</label>
+                        <input type="email" id="pilotEmail" name="email" required placeholder="name@bank.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pilotDesc">Brief Case Description *</label>
+                    <textarea id="pilotDesc" name="description" rows="4" required
+                        placeholder="High-level overview (e.g., 'SMA-2 account, appraisal concerns')"></textarea>
+                </div>
+                <button type="submit" class="form-submit secure-submit">Send Pilot Request →</button>
+                <p class="small-note">We'll respond within 24 hours with engagement terms.</p>
+            </form>
+        </section>

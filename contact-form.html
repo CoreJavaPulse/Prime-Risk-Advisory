@@ -7,16 +7,17 @@
         <div class="secure-badge">Secure & Confidential Channel</div>
         <h2 id="contactModalTitle">Request a Confidential Discussion</h2>
         <p class="modal-note secure-note" id="contactModalDesc">
-            This channel is intended for sensitive inquiries. Information shared is accessible only to authorized
+            This secure channel is intended for sensitive inquiries. Information is accessible only to authorized
             personnel.
-            Please avoid sharing credentials or account numbers.
+            Please do not include passwords, OTPs, or full account numbers.
         </p>
+
 
         <!-- ✅ PERFECT FORM - Google Sheets Native Submit -->
         <form class="contact-form"
             action="https://script.google.com/macros/s/AKfycbz7Tj_Z7t3mfnhIAj2rbvhQINo4hFl3y8PfQBS9Ijsza_1HGfqdN5Hpeio9WXp4Ni5JAg/exec"
             method="POST">
-            
+
             <input type="hidden" name="_csrf" value="generate-unique-token">
             <input type="hidden" name="source" value="Secure Website Contact">
             <input type="hidden" name="confidentiality" value="Privileged & Confidential">
@@ -38,14 +39,17 @@
             <label>Service Type *
                 <select name="service_type" required>
                     <option value="">Select a service</option>
-                    <option value="fraud_investigation">Fraud Investigation</option>
-                    <option value="financial_risk_advisory">Financial Risk Advisory</option>
-                    <option value="aml_compliance_review">AML & Compliance Review</option>
-                    <option value="due_diligence">Due Diligence</option>
+                    <option value="credit_integrity_audit">Credit Integrity Review</option>
+                    <option value="staff_accountability_review">Staff Accountability Assessment</option>
+                    <option value="vendor_surveillance">Third-Party Vendor Review</option>
+                    <option value="ews_monitoring">Early Warning Signal Monitoring</option>
+                    <option value="other">Other / Not Sure</option>
+
+
                 </select>
             </label>
 
-           
+
 
             <label>Nature of Inquiry
                 <textarea name="message" rows="4"
@@ -53,13 +57,15 @@
             </label>
 
             <div class="secure-footer">
-                <span>🔒 End-to-end encrypted transmission</span>
-                <span>👤 Restricted access</span>
+                <span>🔒 Encrypted transmission</span>
+                <span>🛡️ Restricted professional access</span>
             </div>
+
 
             <p id="formFeedback" class="small-note" style="display:none;"></p>
             <button type="submit" class="form-submit secure-submit">
-                <span class="btn-text">Submit Secure Request</span>
+                <span class="btn-text">Submit Confidential Request
+                </span>
                 <span class="btn-spinner" aria-hidden="true"></span>
             </button>
 
@@ -70,7 +76,8 @@
         <div class="success-state" hidden>
             <div class="success-check">✓</div>
             <h3>Request Submitted</h3>
-            <p>Your confidential request has been received securely.</p>
+            <p>Your confidential request has been received. Our team will review and respond appropriately.</p>
+
             <button type="button" class="success-close">Close</button>
         </div>
     </div>
