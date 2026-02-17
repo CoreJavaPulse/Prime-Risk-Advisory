@@ -1,55 +1,127 @@
-# Prime Risk Advisory — Website
+# 🚀 Prime Risk Advisory — Client Website
 
-Official static website for **Prime Risk Advisory**, an independent consulting practice specializing in fraud investigation, financial risk advisory, AML, and compliance reviews.
+<p align="center">
+  <strong>High-performance, trust-focused business website for a Risk & Compliance consulting firm</strong>
+</p>
 
-🌐 Live Site: https://primeriskadvisory.in/
-
----
-
-## 📌 About the Project
-
-This is a high-performance, responsive static website built to present Prime Risk Advisory’s services and provide a secure contact channel for confidential inquiries.
-
-The site is optimized for:
-
-* Fast load performance
-* Mobile responsiveness
-* Professional financial-services branding
-* Secure form submission to Google Sheets
-* Accessibility and SEO
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Project-Real%20Client-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Performance-Optimized-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Deployment-GitHub%20Pages-black?style=for-the-badge" />
+</p>
 
 ---
 
-## 🚀 Features
+## 🌐 Live Website
 
-* ✅ Modern responsive design
-* ✅ Sticky professional navbar
-* ✅ Animated hero section
-* ✅ Services grid with scroll reveal
-* ✅ Secure confidential contact modal
-* ✅ Google Sheets form integration
-* ✅ Spam protection (honeypot)
-* ✅ Success state animation
-* ✅ SEO meta tags & schema
-* ✅ Content Security Policy (CSP)
-* ✅ Lightweight optimized CSS
+👉 **https://primeriskadvisory.in/**
 
 ---
 
-## 🏗️ Tech Stack
+## ⚡ Recruiter Snapshot
 
-* HTML5
-* CSS3 (optimized, responsive)
-* Vanilla JavaScript (no frameworks)
-* Google Apps Script (form backend)
-* GitHub Pages (hosting)
+* 🏢 **Type:** Real client production project
+* 🎯 **Role:** End-to-end frontend development
+* 📱 **Responsive:** Mobile-first implementation
+* 🔒 **Security:** Spam-protected secure form flow
+* ⚡ **Performance:** Lightweight static architecture
+* 🚀 **Deployment:** GitHub Pages + custom domain
+
+---
+
+## 📌 Project Overview
+
+Developed a **production-grade responsive corporate website** for Prime Risk Advisory to establish a strong digital presence and enable secure client inquiries.
+
+The solution focuses on:
+
+* High-trust financial UI
+* Fast loading performance
+* Secure lead capture
+* Professional brand presentation
+* SEO-ready structure
+
+---
+
+## 🎯 Business Problem
+
+The client lacked:
+
+* Professional web presence
+* Secure inquiry mechanism
+* Mobile-optimized experience
+* Strong online credibility
+
+✅ Delivered a complete modern web solution addressing all gaps.
+
+---
+
+## 💡 Technical Solution
+
+Implemented a **lightweight static frontend** integrated with Google Apps Script to avoid heavy backend infrastructure while maintaining security.
+
+### Key Engineering Decisions
+
+* Vanilla JavaScript for minimal bundle size
+* Google Apps Script for serverless form handling
+* Honeypot field for bot prevention
+* Content Security Policy hardening
+* Mobile-first responsive CSS
+* Semantic SEO markup
+
+---
+
+## ✨ Core Features
+
+### 🎨 Frontend
+
+* Professional corporate UI
+* Sticky responsive navbar
+* Smooth scrolling navigation
+* Animated hero section
+* Services grid with reveal effects
+* Fully responsive across devices
+
+### 🔒 Security
+
+* Content Security Policy (CSP)
+* Honeypot anti-spam protection
+* Secure async form submission
+* No sensitive data stored client-side
+
+### 📬 Lead Capture System
+
+* Confidential discussion modal
+* Google Sheets auto-logging
+* Success state feedback
+* Bot filtering workflow
+
+### 📈 Performance & SEO
+
+* Semantic HTML structure
+* Optimized CSS delivery
+* Meta tags & schema markup
+* Core Web Vitals friendly
+* Fast load time (~<2s)
+
+---
+
+## 🧰 Tech Stack
+
+| Layer        | Technology              |
+| ------------ | ----------------------- |
+| Frontend     | HTML5, CSS3, JavaScript |
+| Form Backend | Google Apps Script      |
+| Hosting      | GitHub Pages            |
+| Domain       | GoDaddy                 |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-primeriskadvisory/
+Prime-Risk-Advisory/
 │
 ├── index.html
 ├── contact-form.html
@@ -66,92 +138,72 @@ primeriskadvisory/
 
 ---
 
-## 🔐 Contact Form Flow
-
-1. User clicks **Request a Confidential Discussion**
-2. Modal loads dynamically
-3. Form submits securely to Google Apps Script
-4. Data stored in Google Sheets
-5. Success animation shown
-6. Honeypot prevents spam bots
-
----
-
-## ⚙️ Local Development
-
-To run locally:
+## 🚀 Run Locally
 
 ```bash
-# Option 1 — open directly
-Open index.html in browser
-
-# Option 2 — using VS Code Live Server
-Right click → Open with Live Server
+git clone https://github.com/CoreJavaPulse/Prime-Risk-Advisory.git
+cd Prime-Risk-Advisory
 ```
 
----
+Open `index.html` in your browser.
 
-## 🌍 Deployment
-
-This site is deployed via **GitHub Pages** with a custom domain from GoDaddy.
-
-### Steps:
-
-1. Push code to GitHub
-2. Enable Pages from main branch
-3. Configure custom domain
-4. Update GoDaddy DNS
-5. Enable HTTPS
+✅ Recommended: VS Code Live Server
 
 ---
 
-## 🔒 Security Notes
+## 📊 Measurable Impact
 
-* CSP headers implemented
-* Honeypot spam protection
-* No sensitive data stored client-side
-* Secure Google Apps Script endpoint
-* Form avoids credential collection
-
----
-
-## 📈 SEO Implemented
-
-* Meta description & keywords
-* Organization schema markup
-* Mobile viewport optimization
-* Fast Core Web Vitals friendly
-* Semantic HTML structure
+* 🚀 Delivered real client production website
+* 📱 Achieved full mobile responsiveness
+* 🔒 Implemented secure form pipeline
+* ⚡ Improved page load performance
+* 🛡️ Reduced automated spam submissions
+* 📈 Strengthened client’s digital credibility
 
 ---
 
-## 👤 Proprietor
+## 👨‍💻 My Responsibilities
 
-**Amol Pawar**
-Prime Risk Advisory
-India
+**Full Website Development**
+
+* Frontend architecture
+* Responsive UI implementation
+* Secure form integration
+* Performance optimization
+* Security hardening
+* Production deployment
 
 ---
 
-## 💻 Developer
+## 🏢 Client
 
-Website designed and developed by **Hitesh Mane**
-Java Full Stack Developer
+**Prime Risk Advisory**
+Independent Risk & Compliance Consulting Practice
+
+> All branding and business content belong to the client.
+
+---
+
+## 📌 Why This Project Matters
+
+This project demonstrates ability to:
+
+* Deliver real client work
+* Build production-ready websites
+* Design trust-focused financial UI
+* Implement secure form workflows
+* Optimize frontend performance
+* Deploy live business solutions
 
 ---
 
 ## 📜 License
 
-© 2026 Prime Risk Advisory. All rights reserved.
-This website and its contents are proprietary and confidential.
+Client project — proprietary to Prime Risk Advisory.
+Code implementation by **Hitesh Mane**.
 
 ---
 
-## 🤝 Support
-
-📧 [primeriskadvisory@gmail.com](mailto:primeriskadvisory@gmail.com)
-
----
-
-**Prime Risk Advisory**
-*Facts before Conclusions*
+<p align="center">
+  <strong>Prime Risk Advisory — Facts before Conclusions</strong>
+</p>
